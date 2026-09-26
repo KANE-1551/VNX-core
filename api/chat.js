@@ -35,7 +35,7 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${GROQ_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "llama-3.1-8b-instant", // model cepat untuk tier dasar
+        model: "openai/gpt-oss-120b", // model produksi aktif di Groq (per pengecekan terakhir)
         messages: [systemPrompt, ...messages],
         temperature: 0.7,
         max_tokens: 1024,
